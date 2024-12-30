@@ -111,7 +111,7 @@ jobs:
         with:
           context: "postgres-appliance/"
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.image.outputs.NAME }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Generate artifact attestation
