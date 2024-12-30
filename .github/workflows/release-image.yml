@@ -14,7 +14,12 @@ on:
   release:
     types:
       - published
-
+      
+permissions:
+  id-token: write
+  contents: read
+  attestations: write
+  
 env:
   RELEASE_VERSION: ${{ github.ref_name }}
   IMAGE_NAME: "r1chjames/spilo"
